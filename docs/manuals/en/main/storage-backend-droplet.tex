@@ -99,7 +99,7 @@ Device {
 In these examples all the backup data is placed in the \path|bareos-backup| bucket on the defined S3 storage.
 In contract to other \bareosSd backends, a Bareos volume is not represented by a single file.
 Instead a volume is a sub-directory in the defined bucket
-and every chunk is placed in the Volume directory with the filename 0000-9999
+and every chunk is placed in the volume directory with the filename 0000-9999
 and a size that is defined in the chunksize.
 It is implemented this way, as S3 only allows reading full files,
 so every append operation could result in reading the full volume file again.
@@ -107,7 +107,7 @@ so every append operation could result in reading the full volume file again.
 Following \linkResourceDirective{Sd}{Device}{Device Options} settings are possible:
 
 \begin{description}
-\item[profile] Droplet profile path (e.g. /etc/bareos/bareos-sd.d/droplet/droplet.profile.conf). Make sure the profile file is readable for user \user{bareos}.
+\item[profile] Droplet profile path (e.g. /etc/bareos/bareos-sd.d/droplet/droplet.profile). Make sure the profile file is readable for user \user{bareos}.
 \item[location] Optional, but required for AWS Storage (e.g. eu-west-2 etc.)
 \item[acl] Canned ACL
 \item[storageclass] Storage Class to use.
