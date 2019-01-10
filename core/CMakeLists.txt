@@ -185,6 +185,8 @@ IF (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m${WINDOWS_BITS} -mwin32 -mthreads")
 ENDIF()
 
+
+
 # set INSTALL_LIB_DIR automatically to lib or lib64 automatically
 # Taken from  https://cmake.org/pipermail/cmake/2013-July/055374.html
 
