@@ -6,11 +6,11 @@
 #define LSMDATE "10Jan19"
 
 #ifndef SUPPORTSTATUS
-#define SUPPORTSTATUS "UNSUPPORTED"
+#define SUPPORTSTATUS "UNSUPPORTED by vendor"
 #endif
 
 #ifndef SUPPORTSTATUS_TEXT
-#define SUPPORTSTATUS_TEXT "UNSUPPORTED Bareos binaries. Get a supported version at www.bareos.com"
+#define SUPPORTSTATUS_TEXT "Binary " SUPPORTSTATUS  ". Visit www.bareos.com for supported binaries."
 #endif
 
 

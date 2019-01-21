@@ -90,7 +90,7 @@ static void ListStatusHeader(StatusPacket *sp)
               my_name, VERSION, BDATE, VSS, HOST_OS, DISTNAME, DISTVER);
    sendit(msg, len, sp);
    bstrftime_nc(dt, sizeof(dt), daemon_start_time);
-   len = Mmsg(msg, _("Daemon started %s. Jobs: run=%d running=%d status=%s\n"),
+   len = Mmsg(msg, _("Daemon started %s. Jobs: run=%d running=%d support:%s\n"),
         dt, num_jobs_run, JobCount(), SUPPORTSTATUS);
    sendit(msg, len, sp);
 
