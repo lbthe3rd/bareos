@@ -1750,7 +1750,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            edit_uint64_with_suffix(mr->VolBytes, ec5),
            jcr->SDErrors,
            sd_term_msg,
-           SUPPORTSTATUS,
+           BAREOS_VENDOR_SUPPORT_STATUS,
            term_code);
    } else {
       /*
@@ -1776,7 +1776,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            edt,
            edit_utime(RunTime, elapsed, sizeof(elapsed)),
            jcr->JobPriority,
-           SUPPORTSTATUS,
+           BAREOS_VENDOR_SUPPORT_STATUS,
            term_code);
    }
 }

@@ -204,7 +204,7 @@ bool ConsoleAuthenticatorFrom_18_2::SendResponseMessage(uint32_t response_id, bo
 bool ConsoleAuthenticatorFrom_18_2::SendInfoMessage()
 {
   std::string message;
-  message += SUPPORTSTATUS_TEXT;
+  message += BAREOS_SUPPORTSTATUS_BCONSOLE_MESSAGE;
   message += "\n";
   message += "You are ";
   if (ua_->cons) {

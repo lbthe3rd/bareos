@@ -125,7 +125,7 @@ void ArchiveCleanup(JobControlRecord *jcr, int TermCode)
         schedt,
         sdt,
         edt,
-        SUPPORTSTATUS,
+        BAREOS_VENDOR_SUPPORT_STATUS,
         TermMsg);
 
    Dmsg0(debuglevel, "Leave ArchiveCleanup()\n");

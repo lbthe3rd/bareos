@@ -1244,7 +1244,7 @@ void GenerateBackupSummary(JobControlRecord *jcr, ClientDbRecord *cr, int msg_ty
         edit_uint64_with_suffix(mr.VolBytes, ec8),
         daemon_status.c_str(),
         secure_erase_status.c_str(),
-        SUPPORTSTATUS,
+        BAREOS_VENDOR_SUPPORT_STATUS,
         TermMsg);
 }
 } /* namespace directordaemon */

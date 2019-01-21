@@ -5,17 +5,17 @@
 #define BDATE   "10 January 2019"
 #define LSMDATE "10Jan19"
 
-#ifndef SUPPORTSTATUS
-#define SUPPORTSTATUS "UNSUPPORTED by vendor"
+#ifndef BAREOS_VENDOR_SUPPORT_STATUS
+#define BAREOS_VENDOR_SUPPORT_STATUS "UNSUPPORTED by vendor."
 #endif
 
-#ifndef SUPPORTSTATUS_TEXT
-#define SUPPORTSTATUS_TEXT "Binary " SUPPORTSTATUS  ". Visit www.bareos.com for supported binaries."
+#ifndef BAREOS_SUPPORTSTATUS_BCONSOLE_MESSAGE
+#define BAREOS_SUPPORTSTATUS_BCONSOLE_MESSAGE "Status: " BAREOS_VENDOR_SUPPORT_STATUS " Visit www.bareos.com for support offerings."
 #endif
 
 
 #define PROG_COPYRIGHT "\n" \
-                       SUPPORTSTATUS_TEXT \
+                       BAREOS_SUPPORTSTATUS_BCONSOLE_MESSAGE \
                        "\n" \
                        "Copyright (C) 2013-2019 Bareos GmbH & Co. KG\n" \
                        "Copyright (C) %d-2012 Free Software Foundation Europe e.V.\n" \

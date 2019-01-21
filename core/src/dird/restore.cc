@@ -598,7 +598,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            edit_uint64_with_commas(jcr->jr.JobBytes, ec3),
            (float)kbps,
            sd_term_msg,
-           SUPPORTSTATUS,
+           BAREOS_VENDOR_SUPPORT_STATUS,
            TermMsg);
       break;
    default:
@@ -649,7 +649,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            fd_term_msg,
            sd_term_msg,
            secure_erase_status.c_str(),
-           SUPPORTSTATUS,
+           BAREOS_VENDOR_SUPPORT_STATUS,
            TermMsg);
       break;
    }

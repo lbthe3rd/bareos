@@ -1441,7 +1441,7 @@ static bool UpdateJobRecord(BareosDb *db, JobDbRecord *jr, SESSION_LABEL *elabel
         mjcr->VolSessionId,
         mjcr->VolSessionTime,
         edit_uint64_with_commas(mr.VolBytes, ec3),
-        SUPPORTSTATUS,
+        BAREOS_VENDOR_SUPPORT_STATUS,
         TermMsg);
    }
    FreeJcr(mjcr);

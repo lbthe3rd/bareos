@@ -371,7 +371,7 @@ void ListDirStatusHeader(UaContext *ua)
                 HOST_OS, DISTNAME, DISTVER);
    bstrftime_nc(dt, sizeof(dt), daemon_start_time);
    ua->SendMsg(_("Daemon started %s. Jobs: run=%d, running=%d mode=%d db:%s support:%s\n"),
-                dt, num_jobs_run, JobCount(), (int)DEVELOPER_MODE, dbdrivers.c_str(), SUPPORTSTATUS );
+                dt, num_jobs_run, JobCount(), (int)DEVELOPER_MODE, dbdrivers.c_str(), BAREOS_VENDOR_SUPPORT_STATUS );
    ua->SendMsg(_(" Heap: heap=%s smbytes=%s max_bytes=%s bufs=%s max_bufs=%s\n"),
                 edit_uint64_with_commas((char *)sbrk(0)-(char *)start_heap, b1),
                 edit_uint64_with_commas(sm_bytes, b2),
