@@ -23,7 +23,12 @@ INCLUDE(GNUInstallDirs)
 
 set(CMAKE_MODULE_PATH
          ${CMAKE_MODULE_PATH}
-         ${PROJECT_SOURCE_DIR}/cmake)
+         ${PROJECT_SOURCE_DIR}/../../SOURCES
+         ${PROJECT_SOURCE_DIR}/../SOURCES
+         ${PROJECT_SOURCE_DIR}/cmake
+         )
+
+INCLUDE(BareosLocalBuildDefinitions RESULT_VARIABLE BareosLocalBuildDefinitionsFile)
 
 IF (NOT DEFINED VERSION_STRING)
   # try to get version info from version.h
@@ -63,11 +68,12 @@ set(WEBUICONFDIR "${webuiconfdir}")
 
 
 MESSAGE("   PHP is ${PHP} ")
-MESSAGE("   Install system config files:  ${sysconfdir} ")
-MESSAGE("   Install Bareos config dir:    ${confdir} ")
-MESSAGE("   Install BareosWebui configdir:${webuiconfdir} ")
-MESSAGE("   VERSION_STRING is ${VERSION_STRING} ")
-MESSAGE("   BAREOS_FULL_VERSION is ${BAREOS_FULL_VERSION} ")
+MESSAGE("   Install system config files:   ${sysconfdir} ")
+MESSAGE("   Install Bareos config dir:     ${confdir} ")
+MESSAGE("   Install BareosWebui configdir: ${webuiconfdir} ")
+MESSAGE("   VERSION_STRING:                ${VERSION_STRING} ")
+MESSAGE("   BAREOS_FULL_VERSION:           ${BAREOS_FULL_VERSION} ")
+message("   LocalBuildDefinitionsFile:     ${BareosLocalBuildDefinitionsFile}")
 
 IF (EXISTS ${sysconfdir}/httpd/conf.d)
   SET(HTTPD_CONF ${sysconfdir}/httpd/conf.d)
