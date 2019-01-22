@@ -49,6 +49,7 @@ set(CMAKE_MODULE_PATH
          ${PROJECT_SOURCE_DIR}/cmake
          ${PROJECT_SOURCE_DIR}/..
          ${PROJECT_SOURCE_DIR}/../SOURCES
+         ${PROJECT_SOURCE_DIR}/../../SOURCES
          )
 
 SET(host ${CMAKE_SYSTEM})
