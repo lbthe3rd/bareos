@@ -75,7 +75,7 @@ execute_process(
 INCLUDE(BareosExtractVersionInfo)
 add_definitions(-DVERSION="${BAREOS_FULL_VERSION}")
 
-INCLUDE(BareosLocalBuildDefinitions)
+INCLUDE(BareosLocalBuildDefinitions RESULT_VARIABLE BareosLocalBuildDefinitionsFile)
 
 INCLUDE(BareosFindAllLibraries)
 
@@ -718,6 +718,7 @@ message("   GAWK:                         ${GAWK}")
 message("   RPCGEN:                       ${RPCGEN}")
 message("   MTX:                          ${MTX}")
 message("   DEVELOPER:                    ${developer}")
+message("   LocalBuildDefinitionsFile     ${BareosLocalBuildDefinitionsFile}")
 
 IF(HAVE_WIN32)
    message("   WINDOWS_VERSION:              ${WINDOWS_VERSION}")
