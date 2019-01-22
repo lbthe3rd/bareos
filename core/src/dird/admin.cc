@@ -126,7 +126,7 @@ void AdminCleanup(JobControlRecord *jcr, int TermCode)
         schedt,
         sdt,
         edt,
-        BAREOS_VENDOR_SUPPORT_STATUS,
+        BAREOS_VENDORSUPPORT_STATUS,
         TermMsg);
 
    Dmsg0(debuglevel, "Leave AdminCleanup()\n");

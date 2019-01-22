@@ -587,7 +587,7 @@ void VerifyCleanup(JobControlRecord *jcr, int TermCode)
            jcr->JobErrors,
            fd_term_msg,
            sd_term_msg,
-           BAREOS_VENDOR_SUPPORT_STATUS,
+           BAREOS_VENDORSUPPORT_STATUS,
            TermMsg);
       break;
    default:
@@ -621,7 +621,7 @@ void VerifyCleanup(JobControlRecord *jcr, int TermCode)
            edit_uint64_with_commas(jcr->JobFiles, ec1),
            jcr->JobErrors,
            fd_term_msg,
-           BAREOS_VENDOR_SUPPORT_STATUS,
+           BAREOS_VENDORSUPPORT_STATUS,
            TermMsg);
       break;
    }

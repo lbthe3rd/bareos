@@ -46,7 +46,9 @@ endif()
 
 set(CMAKE_MODULE_PATH
          ${CMAKE_MODULE_PATH}
-         ${PROJECT_SOURCE_DIR}/cmake)
+         ${PROJECT_SOURCE_DIR}/cmake
+         ${PROJECT_SOURCE_DIR}/../cmake
+         )
 
 SET(host ${CMAKE_SYSTEM})
 
@@ -72,6 +74,7 @@ execute_process(
 INCLUDE(BareosExtractVersionInfo)
 add_definitions(-DVERSION="${BAREOS_FULL_VERSION}")
 
+INCLUDE(BareosLocalBuildDefinitions)
 
 INCLUDE(BareosFindAllLibraries)
 

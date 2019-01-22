@@ -91,7 +91,7 @@ static void ListStatusHeader(StatusPacket *sp)
    sendit(msg, len, sp);
    bstrftime_nc(dt, sizeof(dt), daemon_start_time);
    len = Mmsg(msg, _("Daemon started %s. Jobs: run=%d running=%d support:%s\n"),
-        dt, num_jobs_run, JobCount(), BAREOS_VENDOR_SUPPORT_STATUS);
+        dt, num_jobs_run, JobCount(), BAREOS_VENDORSUPPORT_STATUS);
    sendit(msg, len, sp);
 
 #if defined(HAVE_WIN32)
