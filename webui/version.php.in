@@ -1,3 +1,7 @@
 <?php
    $bareos_full_version = "@BAREOS_FULL_VERSION@";
+   //$bareos_vendorsupport_status = "@BAREOS_VENDORSUPPORT_STATUS@";
+   $bareos_vendorsupport_status = false;
+   //$bareos_vendorsupport_message = "@BAREOS_VENDORSUPPORT_MESSAGE@";
+   $bareos_vendorsupport_message = "Officially maintained, supported and packaged binaries built by Bareos GmbH & Co. KG.";
 ?>

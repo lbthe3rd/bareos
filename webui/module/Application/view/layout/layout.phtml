@@ -26,6 +26,13 @@
 
 echo $this->doctype();
 
+include 'version.php';
+
+if($bareos_vendorsupport_status)
+   $support_status = '';
+else
+   $support_status = '<a href="https://www.bareos.com/" title="https://www.bareos.com/en/Subscription.html" target="_blank"><span class="alert alert-info"><strong>Note: </strong>Please get a subscription for maintained and supported packages, thank you.</span></a>';
+
 ?>
 
 <html lang="en">
@@ -83,6 +90,12 @@ echo $this->doctype();
       <div class="collapse navbar-collapse">
          <?php echo $this->navigation('navigation')->menu()->setMinDepth(0)->setMaxDepth(0)->setUlClass('nav navbar-nav'); ?>
          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+               <?php echo $support_status; ?>
+            </li>
+            <li class="dropdown">
+               <a href="#" title="<?php echo $bareos_vendorsupport_message; ?>"><?php echo 'Version: ' . $bareos_full_version; ?></a>
+            </li>
             <li class="dropdown">
                <?php echo $this->UpdateAlert($_SESSION['bareos']['product-updates-status'],$_SESSION['bareos']['dird-update-available']); ?>
             </li>
