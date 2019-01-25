@@ -1714,7 +1714,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            "  Last Volume Bytes:      %s (%sB)\n"
            "  SD Errors:              %d\n"
            "  SD termination status:  %s\n"
-           "  Bareos vendor support:  %s\n"
+           "  Bareos binary info:     %s\n"
            "  Termination:            %s\n\n"),
            BAREOS, my_name, VERSION, LSMDATE,
            HOST_OS, DISTNAME, DISTVER,
@@ -1750,7 +1750,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            edit_uint64_with_suffix(mr->VolBytes, ec5),
            jcr->SDErrors,
            sd_term_msg,
-           BAREOS_VENDORSUPPORT_STATUS,
+           BAREOS_BINARY_AND_SERVICES_MESSAGE,
            term_code);
    } else {
       /*
@@ -1765,7 +1765,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            "  End time:               %s\n"
            "  Elapsed time:           %s\n"
            "  Priority:               %d\n"
-           "  Bareos vendor support:  %s\n"
+           "  Bareos binary info:     %s\n"
            "  Termination:            %s\n\n"),
            BAREOS, my_name, VERSION, LSMDATE,
            HOST_OS, DISTNAME, DISTVER,
@@ -1776,7 +1776,7 @@ static inline void GenerateMigrateSummary(JobControlRecord *jcr, MediaDbRecord *
            edt,
            edit_utime(RunTime, elapsed, sizeof(elapsed)),
            jcr->JobPriority,
-           BAREOS_VENDORSUPPORT_STATUS,
+           BAREOS_BINARY_AND_SERVICES_MESSAGE,
            term_code);
    }
 }

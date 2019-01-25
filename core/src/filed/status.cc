@@ -90,8 +90,8 @@ static void ListStatusHeader(StatusPacket *sp)
               my_name, VERSION, BDATE, VSS, HOST_OS, DISTNAME, DISTVER);
    sendit(msg, len, sp);
    bstrftime_nc(dt, sizeof(dt), daemon_start_time);
-   len = Mmsg(msg, _("Daemon started %s. Jobs: run=%d running=%d support:%s\n"),
-        dt, num_jobs_run, JobCount(), BAREOS_VENDORSUPPORT_STATUS);
+   len = Mmsg(msg, _("Daemon started %s. Jobs: run=%d running=%d, %s binary\n"),
+        dt, num_jobs_run, JobCount(), BAREOS_BINARY_INFO);
    sendit(msg, len, sp);
 
 #if defined(HAVE_WIN32)

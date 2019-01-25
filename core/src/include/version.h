@@ -5,17 +5,22 @@
 #define BDATE   "10 January 2019"
 #define LSMDATE "10Jan19"
 
-#ifndef BAREOS_VENDORSUPPORT_STATUS
-#define BAREOS_VENDORSUPPORT_STATUS "UNSUPPORTED by vendor."
+#ifndef BAREOS_BINARY_INFO
+#define BAREOS_BINARY_INFO "self compiled"
 #endif
 
-#ifndef BAREOS_VENDORSUPPORT_MESSAGE
-#define BAREOS_VENDORSUPPORT_MESSAGE "Status: " BAREOS_VENDORSUPPORT_STATUS " Visit www.bareos.com for support offerings."
+#ifndef BAREOS_SERVICES_MESSAGE
+#define BAREOS_SERVICES_MESSAGE "Get official binaries and support on bareos.com"
+#endif
+
+#ifndef BAREOS_BINARY_AND_SERVICES_MESSAGE
+#define BAREOS_BINARY_AND_SERVICES_MESSAGE  BAREOS_BINARY_INFO " binaries. " BAREOS_SERVICES_MESSAGE
 #endif
 
 
 #define PROG_COPYRIGHT "\n" \
-                       BAREOS_VENDORSUPPORT_MESSAGE \
+                       BAREOS_BINARY_INFO " binary" "\n" \
+                       BAREOS_SERVICES_MESSAGE \
                        "\n" \
                        "Copyright (C) 2013-2019 Bareos GmbH & Co. KG\n" \
                        "Copyright (C) %d-2012 Free Software Foundation Europe e.V.\n" \

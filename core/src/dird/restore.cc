@@ -583,7 +583,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            "  Bytes Restored:         %s\n"
            "  Rate:                   %.1f KB/s\n"
            "  SD termination status:  %s\n"
-           "  Bareos vendor support:  %s\n"
+           "  Bareos binary info:     %s\n"
            "  Termination:            %s\n\n"),
            BAREOS, my_name, VERSION, LSMDATE,
            HOST_OS, DISTNAME, DISTVER,
@@ -598,7 +598,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            edit_uint64_with_commas(jcr->jr.JobBytes, ec3),
            (float)kbps,
            sd_term_msg,
-           BAREOS_VENDORSUPPORT_STATUS,
+           BAREOS_BINARY_AND_SERVICES_MESSAGE,
            TermMsg);
       break;
    default:
@@ -631,7 +631,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            "  FD termination status:  %s\n"
            "  SD termination status:  %s\n"
            "%s"
-           "  Bareos vendor support:  %s\n"
+           "  Bareos binary info:     %s\n"
            "  Termination:            %s\n\n"),
            BAREOS, my_name, VERSION, LSMDATE,
            HOST_OS, DISTNAME, DISTVER,
@@ -649,7 +649,7 @@ void GenerateRestoreSummary(JobControlRecord *jcr, int msg_type, const char *Ter
            fd_term_msg,
            sd_term_msg,
            secure_erase_status.c_str(),
-           BAREOS_VENDORSUPPORT_STATUS,
+           BAREOS_BINARY_AND_SERVICES_MESSAGE,
            TermMsg);
       break;
    }

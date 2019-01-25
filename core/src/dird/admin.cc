@@ -118,7 +118,7 @@ void AdminCleanup(JobControlRecord *jcr, int TermCode)
         "  Scheduled time:         %s\n"
         "  Start time:             %s\n"
         "  End time:               %s\n"
-        "  Bareos vendor support:  %s\n"
+        "  Bareos binary info:     %s\n"
         "  Termination:            %s\n\n"),
         edt,
         jcr->jr.JobId,
@@ -126,7 +126,7 @@ void AdminCleanup(JobControlRecord *jcr, int TermCode)
         schedt,
         sdt,
         edt,
-        BAREOS_VENDORSUPPORT_STATUS,
+        BAREOS_BINARY_AND_SERVICES_MESSAGE,
         TermMsg);
 
    Dmsg0(debuglevel, "Leave AdminCleanup()\n");

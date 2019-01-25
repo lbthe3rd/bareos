@@ -1216,7 +1216,7 @@ void GenerateBackupSummary(JobControlRecord *jcr, ClientDbRecord *cr, int msg_ty
         "  Last Volume Bytes:      %s (%sB)\n"
         "%s"                                        /* Daemon status info */
         "%s"                                        /* SecureErase status */
-        "  Bareos vendor support:  %s\n"
+        "  Bareos binary info:     %s\n"
         "  Termination:            %s\n\n"),
         BAREOS, my_name, VERSION, LSMDATE,
         HOST_OS, DISTNAME, DISTVER,
@@ -1244,7 +1244,7 @@ void GenerateBackupSummary(JobControlRecord *jcr, ClientDbRecord *cr, int msg_ty
         edit_uint64_with_suffix(mr.VolBytes, ec8),
         daemon_status.c_str(),
         secure_erase_status.c_str(),
-        BAREOS_VENDORSUPPORT_STATUS,
+        BAREOS_BINARY_AND_SERVICES_MESSAGE,
         TermMsg);
 }
 } /* namespace directordaemon */
