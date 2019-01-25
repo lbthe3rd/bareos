@@ -87,10 +87,11 @@ ELSE()
   SET(HTTPD_CONF ${sysconfdir}/httpd/conf.d)
 ENDIF()
 
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config/autoload/global.php.in config/autoload/global.php @ONLY)
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/install/directors.ini.in install/directors.ini @ONLY)
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/install/configuration.ini.in install/configuration.ini @ONLY)
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/version.php.in version.php @ONLY)
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config/autoload/global.php.in ${CMAKE_CURRENT_SOURCE_DIR}/config/autoload/global.php @ONLY)
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/install/directors.ini.in ${CMAKE_CURRENT_SOURCE_DIR}/install/directors.ini @ONLY)
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/install/configuration.ini.in ${CMAKE_CURRENT_SOURCE_DIR}/install/configuration.ini @ONLY)
+
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/version.php.in ${CMAKE_CURRENT_SOURCE_DIR}/version.php @ONLY)
 
 
 SET(WEBUI_DIR  ${SHARE_INSTALL_PREFIX}/bareos-webui)
@@ -102,7 +103,7 @@ ELSE()
  MESSAGE("PHP not found")
 ENDIF()
 
-INSTALL(FILES init_autoloader.php version.php DESTINATION ${SHARE_INSTALL_PREFIX}/bareos-webui)
+INSTALL(FILES version.php init_autoloader.php DESTINATION ${SHARE_INSTALL_PREFIX}/bareos-webui)
 INSTALL(DIRECTORY tests config data module public vendor DESTINATION ${SHARE_INSTALL_PREFIX}/bareos-webui)
 
 INSTALL(FILES install/bareos/bareos-dir.d/console/admin.conf.example DESTINATION ${confdir}/bareos-dir.d/console/)
